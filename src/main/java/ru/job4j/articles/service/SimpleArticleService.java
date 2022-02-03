@@ -9,6 +9,9 @@ import ru.job4j.articles.store.ArticleStore;
 import ru.job4j.articles.store.Store;
 import ru.job4j.articles.store.WordStore;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Objects;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
@@ -32,3 +35,4 @@ public class SimpleArticleService implements ArticleService {
                 .forEach(articleStore::save);
     }
 }
+
