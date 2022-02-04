@@ -22,7 +22,6 @@ public class MaxMin {
             }
         }
         return result;
-
     }
 }
 
