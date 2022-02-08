@@ -16,9 +16,9 @@ public class TextGeneratorTest {
         TextGenerator textGenerator = new TextGenerator();
         String template = "I am a ${name}, Who are ${subject}? ";
         Map<String, String> map = new HashMap<>();
-        map.put("name","subject");
+        map.put("name", "subject");
         String expected = String.format("I am a %s, Who are %s? ", "name", map.get("name"));
-        assertThat(expected, is(textGenerator.produce(template,map)));
+        assertThat(expected, is(textGenerator.produce(template, map)));
     }
 
     @Test(expected = IllegalArgumentException.class)
@@ -26,7 +26,7 @@ public class TextGeneratorTest {
         TextGenerator textGenerator = new TextGenerator();
         String template = "I am a ${name}, Who are ${subject}? ";
         Map<String, String> map = new HashMap<>();
-        textGenerator.produce(template,map);
+        textGenerator.produce(template, map);
     }
 
     @Test(expected = IllegalArgumentException.class)
@@ -34,7 +34,7 @@ public class TextGeneratorTest {
         TextGenerator textGenerator = new TextGenerator();
         String template = "I am a ${name}, Who are ${subject}? ";
         Map<String, String> map = new HashMap<>();
-        map.put("surname","subject");
-        textGenerator.produce(template,map);
+        map.put("surname", "subject");
+        textGenerator.produce(template, map);
     }
 }
