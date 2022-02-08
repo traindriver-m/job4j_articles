@@ -1,5 +1,6 @@
 package ru.job4j.template;
 
+import org.junit.Ignore;
 import org.junit.Test;
 import ru.job4j.tdd.Ticket3D;
 
@@ -10,7 +11,7 @@ import static org.hamcrest.Matchers.is;
 import static org.junit.Assert.*;
 
 public class TextGeneratorTest {
-
+    @Ignore
     @Test
     public void whenStringGenerated() {
         TextGenerator textGenerator = new TextGenerator();
@@ -21,6 +22,7 @@ public class TextGeneratorTest {
         assertThat(expected, is(textGenerator.produce(template, map)));
     }
 
+    @Ignore
     @Test(expected = IllegalArgumentException.class)
     public void whenNoKey() {
         TextGenerator textGenerator = new TextGenerator();
@@ -29,6 +31,7 @@ public class TextGeneratorTest {
         textGenerator.produce(template, map);
     }
 
+    @Ignore
     @Test(expected = IllegalArgumentException.class)
     public void whenExtraKey() {
         TextGenerator textGenerator = new TextGenerator();
